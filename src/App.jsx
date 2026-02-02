@@ -1,6 +1,7 @@
 import Counter from './components/Counter'
 import TodoList from './components/TodoList'
 import UserData from './components/UserData'
+import StepControl from './components/StepControl'
 import './App.css'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Counter />
       <TodoList />
       <UserData />
+      <StepControl />
     </>
   )
 }
