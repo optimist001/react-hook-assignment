@@ -10,13 +10,17 @@ const TodoList = () => {
     {addTodo}
   }
 
+  const handleInput = (e) => {
+    setInput(e.target.value)
+  }
+
   
     let todoText = input.trim();
   const addTodo = () => {
 
     if (todoText === "") return;
 
-    setTodos([input, ...todos]);
+    setTodos([todoText, ...todos]);
     setInput("");
   }
 
@@ -30,7 +34,7 @@ const TodoList = () => {
         <form onSubmit={handleSubmit}>
             <input type="text"
             value={todoText}
-            onChange={(e) => setInput(e.target.value)}
+            onChange={handleInput}
             className='input-group' 
             placeholder='Add text...' />
             <button type='submit' onClick={addTodo}>Add</button>
